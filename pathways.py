@@ -49,6 +49,9 @@ y_marker = np.repeat(y, 3)
 
 # Plot potential energy surface
 fig = plt.figure(figsize=(8, 6))
-plt.plot(x_dash, y_dash, linestyle = '--', linewidth = 1)
-plt.plot(x_marker, y_marker, linestyle = '-', linewidth = 3)
+plt.plot(x_dash, y_dash, linestyle = '--', linewidth = 1, c="black")
+plt.plot(x_marker, y_marker, linestyle = '-', linewidth = 3, c="black")
+plt.xticks([])
+plt.xlabel("Reaction Coordinate")
+plt.ylabel("ΔG [kcal/mol]")
 plt.show()
