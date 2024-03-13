@@ -1,4 +1,6 @@
 from goodvibes import GoodVibes as gv
+import numpy as np
+import matplotlib.pyplot as plt
 
 # Call GoodVibes
 #gv.main()
@@ -20,5 +22,4 @@ with open("Goodvibes_output.dat") as output:
 		elif found:
 			pes[line.split()[1]] = float(line.split()[11])
 
-print(pes)
 		
