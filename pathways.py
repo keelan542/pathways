@@ -54,4 +54,10 @@ plt.plot(x_marker, y_marker, linestyle = '-', linewidth = 3, c="black")
 plt.xticks([])
 plt.xlabel("Reaction Coordinate")
 plt.ylabel("ΔG [kcal/mol]")
+
+# Annotate points with species labels
+for i, label in enumerate(pes.keys()):
+	plt.annotate(label, xy=(i, pes[label] + 1), ha="center")
+
+# Show plot
 plt.show()
