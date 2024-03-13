@@ -46,3 +46,9 @@ for i in range(len_pes):
     x_marker[i * 3 + 1] = x[i] + x_gap
     x_marker[i * 3 + 2] = None
 y_marker = np.repeat(y, 3)
+
+# Plot potential energy surface
+fig = plt.figure(figsize=(8, 6))
+plt.plot(x_dash, y_dash, linestyle = '--', linewidth = 1)
+plt.plot(x_marker, y_marker, linestyle = '-', linewidth = 3)
+plt.show()
