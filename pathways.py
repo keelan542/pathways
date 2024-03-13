@@ -22,4 +22,12 @@ with open("Goodvibes_output.dat") as output:
 		elif found:
 			pes[line.split()[1]] = float(line.split()[11])
 
-		
+# Length of pes dictionary
+len_pes = len(pes)
+
+# Amount to offset by on x-axis
+x_gap = 0.2
+
+# Data to plot
+x = np.arange(len_pes)
+y = np.array(list(pes.values()))
