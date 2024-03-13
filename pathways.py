@@ -18,5 +18,7 @@ with open("Goodvibes_output.dat") as output:
 		elif "*" in line:
 			found = False
 		elif found:
-			print(line)
+			pes[line.split()[1]] = float(line.split()[11])
+
+print(pes)
 		
