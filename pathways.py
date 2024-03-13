@@ -31,3 +31,18 @@ x_gap = 0.2
 # Data to plot
 x = np.arange(len_pes)
 y = np.array(list(pes.values()))
+
+# Dashed line
+x_dash = np.empty(len_pes * 2)
+for i in range(len_pes):
+    x_dash[i * 2 + 0] = x[i] - x_gap
+    x_dash[i * 2 + 1] = x[i] + x_gap
+y_dash = np.repeat(y, 2)
+
+# Marker
+x_marker = np.empty(len_pes * 3)
+for i in range(len_pes):
+    x_marker[i * 3 + 0] = x[i] - x_gap
+    x_marker[i * 3 + 1] = x[i] + x_gap
+    x_marker[i * 3 + 2] = None
+y_marker = np.repeat(y, 3)
