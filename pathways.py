@@ -2,7 +2,7 @@ from goodvibes import GoodVibes as gv
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Call GoodVibes
+# Call GoodVibes if required
 #gv.main()
 
 # Dictionary to hold PES points
@@ -61,8 +61,8 @@ plt.ylabel("ΔG [kcal/mol]")
 
 # Annotate points with labels and relative energies
 for i, label in enumerate(pes.keys()):
-	plt.annotate(label, xy=(i, pes[label]), ha="center", va="bottom")
-	plt.annotate(f"{pes[label]:.1f}", xy=(i, pes[label]), ha="center", va="top")
+	plt.annotate(label, xy=(i, pes[label] + 0.25), ha="center", va="bottom", size=9)
+	plt.annotate(f"{pes[label]:.1f}", xy=(i, pes[label] - 0.25), ha="center", va="top", size=9)
 
 # Show plot
 plt.show()
