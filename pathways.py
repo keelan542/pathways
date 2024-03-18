@@ -49,16 +49,16 @@ y_marker = np.repeat(y, 3)
 
 # Plot potential energy surface
 fig = plt.figure(figsize=(8, 6))
-plt.plot(x_dash, y_dash, linestyle = '--', linewidth = 1, c="black")
-plt.plot(x_marker, y_marker, linestyle = '-', linewidth = 3, c="black")
+plt.plot(x_dash, y_dash, linestyle = '--', linewidth = 0.75, color="black", alpha=0.4)
+plt.plot(x_marker, y_marker, linestyle = '-', linewidth = 1.5, color="black")
 plt.xticks([])
 plt.xlabel("Reaction Coordinate")
 plt.ylabel("ΔG [kcal/mol]")
 
 # Annotate points with species labels
 for i, label in enumerate(pes.keys()):
-	plt.annotate(label, xy=(i, pes[label] + 1), ha="center")
-	plt.annotate(f"{pes[label]:.1f}", xy=(i, pes[label] - 2), ha="center")
+	plt.annotate(label, xy=(i, pes[label]), ha="center", va="bottom")
+	plt.annotate(f"{pes[label]:.1f}", xy=(i, pes[label]), ha="center", va="top")
 
 # Show plot
 plt.show()
