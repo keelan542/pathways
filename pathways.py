@@ -47,15 +47,19 @@ for i in range(len_pes):
     x_marker[i * 3 + 2] = None
 y_marker = np.repeat(y, 3)
 
-# Plot potential energy surface
-fig = plt.figure(figsize=(8, 6))
+# Create figure and remove top and right spines
+fig, ax = plt.subplots()
+ax.spines["right"].set_visible(False)
+ax.spines["top"].set_visible(False)
+
+# Plot PES data
 plt.plot(x_dash, y_dash, linestyle = '--', linewidth = 0.75, color="black", alpha=0.4)
 plt.plot(x_marker, y_marker, linestyle = '-', linewidth = 1.5, color="black")
 plt.xticks([])
 plt.xlabel("Reaction Coordinate")
 plt.ylabel("ΔG [kcal/mol]")
 
-# Annotate points with species labels
+# Annotate points with labels and relative energies
 for i, label in enumerate(pes.keys()):
 	plt.annotate(label, xy=(i, pes[label]), ha="center", va="bottom")
 	plt.annotate(f"{pes[label]:.1f}", xy=(i, pes[label]), ha="center", va="top")
