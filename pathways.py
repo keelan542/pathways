@@ -58,6 +58,7 @@ plt.ylabel("ΔG [kcal/mol]")
 # Annotate points with species labels
 for i, label in enumerate(pes.keys()):
 	plt.annotate(label, xy=(i, pes[label] + 1), ha="center")
+	plt.annotate(f"{pes[label]:.1f}", xy=(i, pes[label] - 2), ha="center")
 
 # Show plot
 plt.show()
