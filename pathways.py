@@ -2,6 +2,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def plot_pes(pes_dict):
+    # Length of pes dictionary
+    len_pes = len(pes)
+
     # Amount to offset by on x-axis
     x_gap = 0.2
 
@@ -50,8 +53,5 @@ def plot_pes(pes_dict):
 
 # Dictionary to hold PES points
 pes = {"I1":0.0, "TS1":20.0, "I2":-10.0, "TS2":2.0, "I3":-30.0}
-
-# Length of pes dictionary
-len_pes = len(pes)
 
 plot_pes(pes)
