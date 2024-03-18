@@ -54,4 +54,5 @@ def plot_pes(pes_dict):
 # Dictionary to hold PES points
 pes = {"I1":0.0, "TS1":20.0, "I2":-10.0, "TS2":2.0, "I3":-30.0}
 
+# Calling plotting function
 plot_pes(pes)
