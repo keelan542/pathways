@@ -56,8 +56,12 @@ ax.spines["top"].set_visible(False)
 plt.plot(x_dash, y_dash, linestyle = '--', linewidth = 0.75, color="black", alpha=0.4)
 plt.plot(x_marker, y_marker, linestyle = '-', linewidth = 1.5, color="black")
 plt.xticks([])
-plt.xlabel("Reaction Coordinate")
-plt.ylabel("ΔG [kcal/mol]")
+plt.xlabel("Reaction Coordinate", size=9)
+plt.ylabel("ΔG [kcal/mol]", size=9)
+
+# Add arrows to spines
+ax.plot(0, 1, '^k', transform=ax.transAxes, clip_on=False)
+ax.plot(1, 0, '>k', transform=ax.transAxes, clip_on=False)
 
 # Annotate points with labels and relative energies
 for i, label in enumerate(pes.keys()):
