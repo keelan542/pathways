@@ -54,7 +54,7 @@ def plot_pes(pes_arr):
     plt.show()
 
 # Dictionary to hold PES points
-pes = [{"I1":0.0, "TS1":20.0, "I2":-10.0, "TS2":2.0, "I3":-30.0}]
+pes = [{"I1":0.0, "TS1":20.0, "I2":-10.0, "TS2":2.0, "I3":-30.0},{"I1":0.0, "TS1":30.0, "I2":-15.0, "TS2":10.0, "I3":-20.0}]
 
 # Calling plotting function
 plot_pes(pes)
