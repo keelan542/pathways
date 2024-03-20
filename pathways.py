@@ -5,6 +5,20 @@ def plot_pes(pes_dict):
     # Length of pes dictionary
     len_pes = len(pes)
 
+    # Create figure and remove top and right spines
+    fig, ax = plt.subplots()
+    ax.spines["right"].set_visible(False)
+    ax.spines["top"].set_visible(False)
+
+    # Add arrows to spines
+    ax.plot(0, 1, '^k', transform=ax.transAxes, clip_on=False)
+    ax.plot(1, 0, '>k', transform=ax.transAxes, clip_on=False)
+    
+    # Axes labels
+    plt.xticks([])
+    plt.xlabel("Reaction Coordinate", size=9)
+    plt.ylabel("ΔG [kcal/mol]", size=9)
+
     # Amount to offset by on x-axis
     x_gap = 0.2
 
@@ -27,21 +41,9 @@ def plot_pes(pes_dict):
         x_marker[i * 3 + 2] = None
     y_marker = np.repeat(y, 3)
 
-    # Create figure and remove top and right spines
-    fig, ax = plt.subplots()
-    ax.spines["right"].set_visible(False)
-    ax.spines["top"].set_visible(False)
-
     # Plot PES data
     plt.plot(x_dash, y_dash, linestyle = '--', linewidth = 0.75, color="black", alpha=0.4)
     plt.plot(x_marker, y_marker, linestyle = '-', linewidth = 1.5, color="black")
-    plt.xticks([])
-    plt.xlabel("Reaction Coordinate", size=9)
-    plt.ylabel("ΔG [kcal/mol]", size=9)
-
-    # Add arrows to spines
-    ax.plot(0, 1, '^k', transform=ax.transAxes, clip_on=False)
-    ax.plot(1, 0, '>k', transform=ax.transAxes, clip_on=False)
 
     # Annotate points with labels and relative energies
     for i, label in enumerate(pes.keys()):
