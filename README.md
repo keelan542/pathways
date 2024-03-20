@@ -10,7 +10,13 @@ Edit the dictionary named pes as required and run the pathways.py script.
 
 ## Example Output
 
+Single pathway:
+
 ![example](example.png)
+
+Two pathways:
+
+![example](example2.png)
 
 ## TODO
 
