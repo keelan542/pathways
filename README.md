@@ -6,7 +6,7 @@ Requires NumPy and Matplotlib.
 
 ## Usage
 
-Edit the dictionary named pes as required and run the pathways.py script.
+Add any number of PES dictionaries to the array named pes at the bottom of pathways.py and run as a script.
 
 ## Example Output
 
@@ -20,5 +20,4 @@ Two pathways:
 
 ## TODO
 
-- Add ability to plot multiple pathways on one plot.
 - Add small images of structures.
