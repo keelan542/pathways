@@ -1,6 +1,6 @@
 # Pathways
 
-Simple Python program that plots a reaction coordinate diagram, given a dictionary of points.
+Simple Python program that plots reaction coordinate diagrams.
 
 Requires NumPy and Matplotlib.
 
