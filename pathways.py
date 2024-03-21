@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def plot_pes(pes_arr):
+def plot_pes(pes_arr, same_ref=False):
     # Create figure and remove top and right spines
     fig, ax = plt.subplots()
     ax.spines["right"].set_visible(False)
@@ -19,7 +19,7 @@ def plot_pes(pes_arr):
     # Amount to offset by on x-axis
     x_gap = 0.2
 
-    for surface in pes_arr:
+    for i,surface in enumerate(pes_arr):
         len_pes = len(surface)
 
         # Data to plot
@@ -54,7 +54,7 @@ def plot_pes(pes_arr):
     plt.show()
 
 # Dictionary to hold PES points
-pes = [{"R":0.0, "TS1":20.0, "I2":-10.0, "TS2":2.0, "P":-30.0},{"R":5.0, "TS1":30.0, "I2":-15.0, "TS2":10.0, "P":-20.0}]
+pes = [{"R":0.0, "TS1":20.0, "I2":-10.0, "TS2":2.0, "P":-30.0},{"R2":0.0, "TS1":30.0, "I2":-15.0, "TS2":10.0, "P":-20.0}]
 
 # Calling plotting function
-plot_pes(pes)
+plot_pes(pes, same_ref=True)
